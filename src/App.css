@@ -12,6 +12,26 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+ul li{
+  list-style-type: georgian;
+}
+
+.app-wrapper{
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+          "h h "
+          "n c ";
+  grid-template-rows: 160px 1fr;
+  grid-template-columns: 2fr 10fr;
+  width: 600px;
+}
+
+.content{
+  background: blue;
+  grid-area: c;
+}
+
 
 .App-header {
   background-color: #282c34;

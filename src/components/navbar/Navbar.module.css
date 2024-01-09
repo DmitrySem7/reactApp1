@@ -1,0 +1,13 @@
+.nav1-wrapper{
+    grid-area: n;
+    background: darkolivegreen;
+}
+.item{
+    color: white;
+}
+.active{
+    color: gold;
+}
+img.profile{
+    alt:"Какое-то изображение профиля уменьшенное скорее всего";
+}
