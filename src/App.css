@@ -26,7 +26,10 @@ ul li{
   grid-template-columns: 2fr 10fr;
   width: 600px;
 }
-
+.app-wrapper-content{
+  background: blue;
+  grid-area: c;
+}
 .content{
   background: blue;
   grid-area: c;
