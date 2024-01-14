@@ -2,11 +2,17 @@
     grid-area: n;
     background: darkolivegreen;
 }
-.item{
+.item a:focus{
+
+}
+.item a {
     color: white;
 }
-.active{
+.active-link{
     color: gold;
+}
+.active{
+    color: blue;
 }
 img.profile{
     alt:"Какое-то изображение профиля уменьшенное скорее всего";

@@ -24,7 +24,7 @@ ul li{
           "n c ";
   grid-template-rows: 160px 1fr;
   grid-template-columns: 2fr 10fr;
-  width: 600px;
+  width: 1600px;
 }
 .app-wrapper-content{
   background: blue;

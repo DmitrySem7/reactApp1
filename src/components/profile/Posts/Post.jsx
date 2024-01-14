@@ -5,12 +5,19 @@ import {PB} from "./Post/PostBody";
 const Post = ()=>{
     return <div>
         My posts
-        <div>
+        <div className={p.postsBlock}>
             New post
-            <textarea></textarea>
-            <button>Add post</button>
+            <div>
+                <textarea>
+
+            </textarea>
+            </div>
+            <div>
+                <button>Add post</button>
+            </div>
+
         </div>
-        <div>
+        <div className={p.posts}>
             <PB message="Hi! How are you?" likeCount="0"/>
             <PB message="It's my first post!" likeCount="15"/>
             <PB/>
