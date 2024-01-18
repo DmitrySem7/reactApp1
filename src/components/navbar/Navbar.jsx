@@ -1,7 +1,8 @@
 import React from "react";
 import classes from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
-const Navbar = () =>{
+import {FriendListElement} from "./Friend/Friend";
+const Navbar = (props) =>{
     return <nav className={classes['nav1-wrapper']}>
             <div className={classes['item']}>
                 <NavLink to="/profile" style={({isActive}) => ({color: isActive ? 'yellow' : 'white'})}>Profile</NavLink>
@@ -15,6 +16,7 @@ const Navbar = () =>{
             <div className={classes['item']}>
                 <NavLink to="/" style={({isActive}) => ({color: isActive ? 'yellow' : 'white'})}>Music</NavLink>
             </div>
+            <FriendListElement state={props.state}/>
         </nav>
 
 }

@@ -1,0 +1,7 @@
+.FriendElement{
+    color: aqua;
+}
+.FriendBlock{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

@@ -4,11 +4,18 @@
 .message{
 
 }
+input.newMessageInput{
+
+}
+.messages .message{
+    color: white;
+}
 .dialogs{
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
 .dialogs-items{
+    color: white;
     padding: 10px;
 }
 .dialogs NavLink{

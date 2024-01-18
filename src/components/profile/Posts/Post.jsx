@@ -2,25 +2,35 @@ import React from "react";
 import p from './Post.module.css';
 import prof from "../Profile.module.css";
 import {PB} from "./Post/PostBody";
-const Post = ()=>{
+import {updateNewPostText} from "../../../redux/state";
+const Post = (props)=>{
+    let newPostElement = React.createRef();
+    let addPost = ()=>{
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
+    let onPostChange = () =>{
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
+    let postElement = props.state.postList.map(data=>{
+        return <PB message={data.message} likeCount={data.likeCount} id={data.id}/>
+    })
     return <div>
         My posts
         <div className={p.postsBlock}>
             New post
             <div>
-                <textarea>
-
-            </textarea>
+                <textarea ref={newPostElement} onChange={onPostChange} value={props.state.newPostText}></textarea>
             </div>
             <div>
-                <button>Add post</button>
+                <button onClick={addPost}>Add post</button>
             </div>
 
         </div>
         <div className={p.posts}>
-            <PB message="Hi! How are you?" likeCount="0"/>
-            <PB message="It's my first post!" likeCount="15"/>
-            <PB/>
+            {postElement}
         </div>
     </div>
 }
